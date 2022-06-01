@@ -1,0 +1,26 @@
+package bgm.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ADC extends Champions{
+	
+	private String rangeSeverity;
+	private static List<ADC> adcs = new ArrayList<>();
+
+	public ADC(String name , String rangeSeverity) {
+		super(name);
+		this.rangeSeverity = rangeSeverity;
+		adcs.add(this);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static List<ADC> getAdcs() {
+		return adcs;
+	}
+	
+	
+	
+	
+
+}
