@@ -1,0 +1,87 @@
+package bgm.model;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+
+public class BurgerGenerator implements Generator<Burger>,Iterable<Burger> {
+	
+	
+	BBQburger bbq = new BBQburger();
+	CheeseBurger cheese = new CheeseBurger();
+	ChickenBurger chicken = new ChickenBurger();
+	List<Burger> burgers = new ArrayList<>();
+	private Random random;
+	
+	public BurgerGenerator() {
+		random = new Random();
+	}
+	
+	public List<Burger> BurgersList() {
+		burgers.add(new BBQburger());
+		burgers.add(new CheeseBurger());
+		burgers.add(new ChickenBurger());
+		
+		return burgers;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	@Override
+	public Iterator<Burger> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Burger next() {
+		List<Burger> a = BurgersList();
+		
+		//Object[] bbs = a.toArray();
+		int index = random.nextInt(a.size());
+		
+		return a.get(index);
+	}
+	
+	class BurgerIterator implements Iterator<Burger> {
+
+		@Override
+		public boolean hasNext() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public Burger next() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
+
+}

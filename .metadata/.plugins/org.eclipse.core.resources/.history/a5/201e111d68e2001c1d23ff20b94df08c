@@ -1,0 +1,34 @@
+package bgm.models;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class ADC extends Champions{
+	
+	static ADC cait = new ADC("caitlyn", "severe");
+	static ADC mf = new ADC ("MF", "middle");
+	static ADC twitch = new ADC ("twitch", " middle ");
+	static ADC ezreal = new ADC("ezreal" , "severe");
+	
+	
+	private String rangeSeverity;
+	private static List<ADC> adcs = new ArrayList<>(Arrays.asList(cait , ezreal , mf, twitch));
+	
+
+	private ADC(String name , String rangeSeverity) {
+		super(name);
+		this.rangeSeverity = rangeSeverity;
+		adcs.add(this);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static List<ADC> getAdcs() {
+		return adcs;
+	}
+	
+	
+	
+	
+
+}

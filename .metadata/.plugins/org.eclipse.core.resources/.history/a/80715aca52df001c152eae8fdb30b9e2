@@ -1,0 +1,58 @@
+package bgm.model.Coffee;
+
+import java.util.Iterator;
+import java.util.Random;
+
+public class CoffeeGenerator implements Generator<Coffee>,Iterable<Coffee> {
+
+	
+	
+	private Class<?>[] coffees = { Americano.class , Cappucino.class , Filter.class , Brewed.class };
+	
+	private Random random;
+	
+	public CoffeeGenerator() {
+		random = new Random();
+	}
+	
+	
+	@Override
+	public Coffee next() {
+		
+		int index = random.nextInt(coffees.length);
+		
+		try {
+			return (Coffee) coffees[index].newInstance();
+		}catch(Exception ex){
+			System.out.format("Exception :: %s", ex.getMessage());
+		}
+		return null;
+		
+		
+	}
+	
+	private class CoffeeIterator implements Iterator {
+		
+		private int currentIndex;
+		
+
+		@Override
+		public boolean hasNext() {
+			return currentIndex < coffees.length;
+		}
+
+		@Override
+		public Object next() {
+			return coffees[currentIndex++];
+		}
+		
+	}
+
+	@Override
+	public Iterator<Coffee> iterator() {
+		return new CoffeeIterator();
+	}
+
+	
+	
+}

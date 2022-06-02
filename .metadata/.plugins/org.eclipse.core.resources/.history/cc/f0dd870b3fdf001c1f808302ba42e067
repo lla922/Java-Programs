@@ -1,0 +1,14 @@
+package bgm.main;
+
+import bgm.model.Coffee.Americano;
+
+public class DriverCoffee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Americano americano = new Americano();
+
+	}
+
+}

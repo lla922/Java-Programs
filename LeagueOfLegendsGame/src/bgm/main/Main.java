@@ -27,10 +27,18 @@ public class Main {
 		Top fiora = new Top("fiora");
 		Top gwen = new Top("Gwen");
 		
-		System.out.println(ADC.getAdcs().toString());
-		System.out.println(Support.getSups().toString());
-		System.out.println(Top.getTops().toString());
-		System.out.println(Jungler.getJungs().toString());
+		Mid akali = new Mid("akali","assassin");
+		Mid katarina = new Mid("katarina","assassin");
+		Mid zed = new Mid("zed","assassin");
+		Mid leblanc = new Mid("leblanc","mage");
+		
+		System.out.println("Attack damage carriers available :" + ADC.getAdcs().toString());
+		System.out.println("\nSupports available :" + Support.getSups().toString());
+		System.out.println("\nTop laners available :" + Top.getTops().toString());
+		System.out.println("\nJunglers available " + Jungler.getJungs().toString());
+		System.out.println("\nMid laners available : " + Mid.getMidLaners().toString());
+		
+		System.out.println("\n");
 	
 		
 		Team team = new Team();

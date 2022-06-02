@@ -1,0 +1,32 @@
+package bgm.models;
+
+import java.util.List;
+
+public class Top extends Champions{
+	
+	private TopType type;
+	private static List<Top> tops;
+
+	public Top(String name, TopType type) {
+		super(name);
+		this.type = type;
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static List<Top> getTops() {
+		return tops;
+	}
+	
+	class TopType {
+		private String type;
+		
+		public void setType(String type) {
+			this.type = type;
+		}
+		
+		public String getType() {
+			return type;
+		}
+	}
+
+}

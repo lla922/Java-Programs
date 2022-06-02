@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="bgm.model.Coffee.Americano"/>
+    <fullyQualifiedTypeName name="bgm.model.Coffee.Cappucino"/>
+    <fullyQualifiedTypeName name="bgm.model.Coffee.Coffee"/>
+    <fullyQualifiedTypeName name="bgm.model.Coffee.CoffeeGenerator.CoffeeIterator"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="bgm.model.Coffee.CoffeeGenerator"/>
+    <fullyQualifiedTypeName name="bgm.model.Coffee.FibonacciGeneratorNew"/>
+    <fullyQualifiedTypeName name="bgm.model.Coffee.FibonacciGenerator"/>
+    <fullyQualifiedTypeName name="java.util.Deque"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="bgm.model.BurgerGenerator"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+    <fullyQualifiedTypeName name="bgm.models.Support.SupportType"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="bgm.models.ADC"/>
+    <fullyQualifiedTypeName name="bgm.models.Support"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

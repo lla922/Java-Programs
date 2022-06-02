@@ -1,0 +1,22 @@
+package bgm.main;
+import bgm.main.*;
+import bgm.models.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ADC cait = new ADC("caitlyn", "severe");
+		ADC mf = new ADC ("MF", "middle");
+		ADC twitch = new ADC ("twitch", " middle ");
+		ADC ezreal = new ADC("ezreal" , "severe");
+		
+		System.out.println(ADC.getAdcs().toString());
+		
+		Team team = new Team();
+		
+		System.out.println(team.createTeam());
+
+	}
+
+}

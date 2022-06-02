@@ -1,0 +1,21 @@
+package bgm.main;
+
+import bgm.model.Coffee.Americano;
+import bgm.model.Coffee.Cappucino;
+import bgm.model.*;
+
+public class DriverCoffee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Americano americano = new Americano();
+		System.out.println(americano);
+		
+		Cappucino c = new Cappucino();
+		
+		System.out.println(c);
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package bgm.model;
+
+public abstract class Coffee {
+	
+	private static long idCounter = 0;
+	privat
+
+}

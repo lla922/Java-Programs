@@ -1,0 +1,15 @@
+package bgm.model;
+
+public abstract class Burger {
+	
+	private static int idCounter = 0;
+	private final int ID = idCounter++;
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getClass().getSimpleName() + " - " + ID; 
+		}
+	
+
+}

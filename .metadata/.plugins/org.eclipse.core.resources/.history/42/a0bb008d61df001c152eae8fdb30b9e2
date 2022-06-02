@@ -1,0 +1,5 @@
+package bgm.models;
+
+public interface Generator {
+
+}

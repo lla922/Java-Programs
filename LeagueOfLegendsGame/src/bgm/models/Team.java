@@ -5,19 +5,11 @@ import java.util.List;
 import java.util.Random;
 import bgm.models.*;
 
-public class Team<Champions> {
+public class Team<T> {
 	
-	List<Champions> champsTeam;
+	List<T> champsTeam;
 	
 	private Random random;
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
-		return super.clone();
-	}
-	
-	
-	
 	
 	public Team () {
 		champsTeam = new ArrayList<>();
@@ -25,21 +17,27 @@ public class Team<Champions> {
 	}
 	
 	
-	public List<Champions> createTeam() {
-		List<Champions> a = new ArrayList<>();
+	public List<T> createTeam() {
+		List<T> a = new ArrayList<>();
 		
-		a.add((Champions) getRandomAdc());
-		a.add((Champions) getRandomJungler());
-		a.add((Champions) getRandomSupport());
-		a.add((Champions) getRandomTop());
+		a.add((T) getRandomAdc());
+		a.add((T) getRandomJungler());
+		a.add((T) getRandomSupport());
+		a.add((T) getRandomTop());
+		a.add((T) getRandomMid());
 		return a;
 	}
 	
-	public List<Champions> createEnemyTeam(){
+	public List<T> createEnemyTeam(){
 		if( champsTeam != null) {
-			List<Champions> enemyTeam = createTeam();
+			List<T> enemyTeam = createTeam();
 			return enemyTeam;
 		} return null;
+	}
+	
+	public Mid getRandomMid() {
+		int indexMid = random.nextInt(Mid.getMidLaners().size());
+		return Mid.getMidLaners().get(indexMid);
 	}
 	
 	public ADC getRandomAdc() {
@@ -48,6 +46,7 @@ public class Team<Champions> {
 		return ADC.getAdcs().get(indexAdc);
 			
 	}
+	
 	
 	public Support getRandomSupport() {
 		int indexSup = random.nextInt(Support.getSups().size());

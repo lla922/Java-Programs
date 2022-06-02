@@ -1,0 +1,5 @@
+package bgm.model.Coffee;
+
+public class Americano {
+
+}
