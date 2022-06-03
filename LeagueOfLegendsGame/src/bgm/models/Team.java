@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 import bgm.models.*;
 
-public class Team<T> {
+public class Team<T extends Champions> {
 	
 	List<T> champsTeam;
 	
@@ -17,30 +17,30 @@ public class Team<T> {
 	}
 	
 	
-	public List<T> createTeam() {
-		List<T> a = new ArrayList<>();
+	public List<Champions> createTeam() {
+		List<Champions> a = new ArrayList<>();
 		
-		a.add((T) getRandomAdc());
-		a.add((T) getRandomJungler());
-		a.add((T) getRandomSupport());
-		a.add((T) getRandomTop());
-		a.add((T) getRandomMid());
+		a.add(getRandomAdc());
+		a.add(getRandomJungler());
+		a.add(getRandomSupport());
+		a.add(getRandomTop());
+		a.add(getRandomMid());
 		return a;
 	}
 	
-	public List<T> createEnemyTeam(){
+	public List<Champions> createEnemyTeam(){
 		if( champsTeam != null) {
-			List<T> enemyTeam = createTeam();
+			List<Champions> enemyTeam = createTeam();
 			return enemyTeam;
 		} return null;
 	}
 	
-	public Mid getRandomMid() {
+	public Champions getRandomMid() {
 		int indexMid = random.nextInt(Mid.getMidLaners().size());
 		return Mid.getMidLaners().get(indexMid);
 	}
 	
-	public ADC getRandomAdc() {
+	public Champions getRandomAdc() {
 		
 		int indexAdc = random.nextInt(ADC.getAdcs().size());
 		return ADC.getAdcs().get(indexAdc);
@@ -48,17 +48,17 @@ public class Team<T> {
 	}
 	
 	
-	public Support getRandomSupport() {
+	public Champions getRandomSupport() {
 		int indexSup = random.nextInt(Support.getSups().size());
 		return Support.getSups().get(indexSup);
 	}
 	
-	public Jungler getRandomJungler() {
+	public Champions getRandomJungler() {
 		int indexJung = random.nextInt(Jungler.getJungs().size());
 		return Jungler.getJungs().get(indexJung);
 	}
 	
-	public Top getRandomTop() {
+	public Champions getRandomTop() {
 		int indexTop = random.nextInt(Top.getTops().size());
 		return Top.getTops().get(indexTop);
 	}

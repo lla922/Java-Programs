@@ -15,6 +15,13 @@ public class Mid extends Champions {
 		// TODO Auto-generated constructor stub
 	}
 	
+	static {
+		new Mid("akali","assassin");
+		new Mid("katarina","assassin");
+		new Mid("zed","assassin");
+		new Mid("leblanc","mage");
+	}
+	
 	public static List<Mid> getMidLaners() {
 		return midLaners;
 	}

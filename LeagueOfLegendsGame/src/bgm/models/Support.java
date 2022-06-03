@@ -15,6 +15,13 @@ public class Support extends Champions {
 		// TODO Auto-generated constructor stub
 	}
 	
+	static {
+		new Support("Sona", "healer");
+		new Support ("Soraka", "healer");
+		new Support ("lulu", " healer");
+		new Support("yuumi" , "healer");
+	}
+	
 	public static List<Support> getSups() {
 		return sups;
 	}

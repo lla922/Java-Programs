@@ -13,6 +13,13 @@ public class Jungler extends Champions{
 		// TODO Auto-generated constructor stub
 	}
 	
+	static {
+		new Jungler("lee sin");
+		new Jungler("khazix");
+		new Jungler("rammuss");
+		new Jungler("viego");
+	}
+	
 	public static List<Jungler> getJungs() {
 		return jungs;
 	}

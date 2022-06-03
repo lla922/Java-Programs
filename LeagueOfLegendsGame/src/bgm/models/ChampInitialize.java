@@ -2,6 +2,8 @@ package bgm.models;
 
 public class ChampInitialize {
 	
+	static {
+	
 	ADC cait = new ADC("caitlyn", "severe");
 	ADC mf = new ADC ("MF", "middle");
 	ADC twitch = new ADC ("twitch", " middle ");
@@ -22,6 +24,6 @@ public class ChampInitialize {
 	Top fiora = new Top("fiora");
 	Top gwen = new Top("Gwen");
 	
-	
+	}
 
 }

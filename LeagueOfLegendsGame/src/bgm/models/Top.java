@@ -15,6 +15,13 @@ public class Top extends Champions{
 		// TODO Auto-generated constructor stub
 	}
 	
+	static {
+		new Top("mordekaiser");
+		new Top("irelia");
+		new Top("fiora");
+		new Top("Gwen");
+	}
+	
 	public static List<Top> getTops() {
 		return tops;
 	}
