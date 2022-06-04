@@ -1,4 +1,6 @@
 package bgm.main;
+import java.util.List;
+
 import bgm.main.*;
 import bgm.models.*;
 
@@ -18,7 +20,11 @@ public class Main {
 		
 		Team team = new Team();
 		
-		System.out.println("the team created automatically is : " + team.createTeam() + " enemy team is :" + team.createEnemyTeam());
+		System.out.println(team.secondTeam() + " -- " + team.firstTeam());
+		
+		
+		
+		
 
 	}
 

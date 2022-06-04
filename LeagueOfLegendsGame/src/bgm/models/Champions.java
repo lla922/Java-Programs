@@ -2,7 +2,7 @@ package bgm.models;
 
 import java.util.List;
 
-public abstract class Champions<T> {
+public abstract class Champions {
 	
 	private String name;
 	private static List<Champions> champs;
@@ -17,6 +17,9 @@ public abstract class Champions<T> {
 	
 	public static List<Champions> getChamps() {
 		return champs;
+	}
+	public String getName() {
+		return name;
 	}
 	
 	@Override
