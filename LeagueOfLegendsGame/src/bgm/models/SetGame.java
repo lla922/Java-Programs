@@ -6,17 +6,18 @@ import java.util.List;
 import java.util.Random;
 import bgm.models.*;
 
-public class Team<T extends Champions> {
+public class SetGame<T extends Champions> {
 	
-	List<Champions> champsTeam1;
-	List<Champions> champsTeam2;
+	 List<Champions> champsTeam1;
+	 List<Champions> champsTeam2;
 	private Random random;
 	
-	public Team () {
+	public SetGame () {
 		
 		champsTeam1 = new ArrayList<>();
 		champsTeam2 = new ArrayList<>();
 		random = new Random();
+		createTeams();
 	}
 	
 	
@@ -38,22 +39,15 @@ public class Team<T extends Champions> {
 	}
 	
 	public List<Champions> secondTeam() {
-		champsTeam2 = team2DuplicateChecker();
+		//champsTeam2 = team2DuplicateChecker();
 		return champsTeam2;
 	}
 	
 	
 	
-	public void createTeams() {
+	private void createTeams() {
 		champsTeam1 = addChamps(champsTeam1);
 		champsTeam2 = addChamps(champsTeam2);
-	}
-	
-	
-	
-	public List<Champions> team2DuplicateChecker(){
-		
-	createTeams();
 		
 		if( champsTeam1 != null) {
 			
@@ -72,13 +66,39 @@ public class Team<T extends Champions> {
 				}
 			}
 			}
-			
-				
-			return champsTeam2;
-		} return null;
+		}
 	}
 	
-	public Champions getRandomMid() {
+	
+	
+//	public List<Champions> team2DuplicateChecker(){
+//		
+//	
+//		
+//		if( champsTeam1 != null) {
+//			
+//			for(int i = 0; i < champsTeam1.size(); i++) {
+//			while(champsTeam1.get(i).equals(champsTeam2.get(i))){
+//				if( i == 0 ) {
+//					champsTeam2.set(i, getRandomAdc());
+//				}else if(i == 1) {
+//					champsTeam2.set(i, getRandomJungler());
+//				}else if( i == 2) {
+//					champsTeam2.set(i, getRandomSupport());
+//				}else if ( i == 3 ) {
+//					champsTeam2.set(i, getRandomTop());
+//				}else {
+//					champsTeam2.set(i, getRandomMid());
+//				}
+//			}
+//			}
+//			
+//				
+//			return champsTeam2;
+//		} return null;
+//	}
+	
+	public Champions getRandomMid() {            //KENDIMI TEKRAR EDIYORUM . SEBEBI ISE HER TUR KARAKTERIN BULUNDUGU LISTE UZUNLUGUNUN FARKLI OLMASI . RANDOMA BOUND VERIRKEN HEPSI AYRI AYRI LAZIM .BASKA NASIL TASARLANIR ?
 		int indexMid = random.nextInt(Mid.getMidLaners().size());
 		return Mid.getMidLaners().get(indexMid);
 	}

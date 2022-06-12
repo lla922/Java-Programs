@@ -18,10 +18,20 @@ public class Main {
 		System.out.println("\n");
 	
 		
-		Team team = new Team();
+		SetGame newVs = new SetGame();
 		
-		System.out.println(team.secondTeam() + " -- " + team.firstTeam());
+		System.out.println(newVs.firstTeam() + " -- " + newVs.secondTeam());
 		
+		SetGame newVs2 = new SetGame();
+		
+		System.out.println(newVs2.firstTeam() + "--" + newVs2.secondTeam());
+		
+		
+		char a = 65;
+		
+		char b = 55;
+		
+		int x = a+b;
 		
 		
 		
