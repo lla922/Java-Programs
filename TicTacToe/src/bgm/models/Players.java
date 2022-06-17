@@ -86,7 +86,7 @@ public class Players {
 
 			draw();
 
-		} while (!game.isPoints());
+		} while (!game.finished());
 
 		System.out.println(game.congratsMessage());
 	}

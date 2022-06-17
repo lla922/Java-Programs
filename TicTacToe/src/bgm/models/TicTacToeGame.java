@@ -27,10 +27,38 @@ public class TicTacToeGame {
 
 	}
 
+	public boolean finished() {
+		if (isPoints() || isTie()) {
+			return true;
+		}
+		return false;
+	}
+
 	public boolean isPoints() {
 
 		return isRow() || isDiagonal() || isCDiagonal() || isColumn();
 
+	}
+
+	public boolean empty() {
+		boolean a = false;
+		for (int i = 0; i < 3; i++) {
+			for (int m = 0; m < 3; m++) {
+				if (tictactoeboard[i][m] == ' ') {
+					a = true;
+				}
+			}
+		}
+		return a;
+	}
+
+	public boolean isTie() {
+		if (!empty()) {
+			if (!isPoints()) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public String congratsMessage() {
@@ -40,6 +68,8 @@ public class TicTacToeGame {
 			} else if (getWinner() == oPlayer) {
 				return "CONGRATS !  " + oPlayer.getName() + " O is the winner ! (o)";
 			}
+		} else if (isTie()) {
+			return "No winner sorry..";
 		}
 		return null;
 	}
