@@ -101,9 +101,6 @@ public class TicketDriver {
 
 		/*
 		 * 
-		 * Last one Gives error as if this seat does not exist inside linkedlist. It
-		 * prints "sirry,, This ticket has already been issued"
-		 * 
 		 */
 
 	}
