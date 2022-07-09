@@ -1,6 +1,5 @@
 package TicketingSimulation.Models;
 
-import java.util.LinkedList;
 import java.util.ListIterator;
 
 import TicketingSimulation.Exceptions.TicketHasAlreadyBeenIssuedException;
@@ -8,18 +7,20 @@ import TicketingSimulation.Exceptions.TicketNumberOutOfBoundsException;
 
 /*
  * This is a ticketing system simulation . 
- * Every seat has a number . We ticket the seats in correct order .
- * We must be able to ticket multiple seats at a time .
- * We must be able to see empty seats available . Row letter , and seat numbers in each row .
+ * Every seat has a number 1-50 and every 10 seat has a char assigned .
+ * We must be able to see empty seats available . 
  */
 public class Ticketing {
 
 	private static Seats seats;
 	public static ListIterator<Seats> x;
 
-	public static LinkedList<Seats> seeAllSeatsAvailable() {
-
-		return Seats.seatsInSaloon;
+	public static String seeAllSeatsAvailable() {
+		StringBuilder str = new StringBuilder("AVAILABLE SEATS : \n");
+		for (Seats s : Seats.seatsInSaloon) {
+			str.append(s.toString());
+		}
+		return str.toString();
 	}
 
 	public static void ticketSeat(int seatNum, char seatChar)

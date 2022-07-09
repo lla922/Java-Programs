@@ -60,7 +60,8 @@ public class Seats {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "the seat num : " + this.seatNumber + " the seat char : " + this.seatChar + "\n";
+		return String.format(" %d-%c\n", this.seatNumber, this.seatChar);
+
 	}
 
 }
